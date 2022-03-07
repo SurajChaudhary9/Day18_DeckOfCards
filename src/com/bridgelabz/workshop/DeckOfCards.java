@@ -8,11 +8,9 @@
 package com.bridgelabz.workshop;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class DeckOfCards {
 	public static ArrayList<String> deckCards = new ArrayList<>();
-	public static Scanner scanner = new Scanner(System.in);
 
 //Welcome message 
 	public void welcome() {
