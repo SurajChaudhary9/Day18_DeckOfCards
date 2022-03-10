@@ -50,10 +50,30 @@ public class DeckOfCards {
 		System.out.println();
 	}
 
+	/**
+	 * @Purpose :To get no players
+	 * @Param :Choice i/p
+	 * @Function :condition
+	 * @Return :no return
+	 */
+	public void noOfPlayers() {
+		System.out.print("\nEnter number of players minimum 2 , maximum 4 : ");
+		int player = scanner.nextInt();
+		if (player >= 2 && player <= 4) {
+			System.out.println("\n" + player + " players will play the game");
+		} else {
+			System.out.println("Please enter number of players in the Range");
+			this.noOfPlayers();
+			scanner.close();
+		}
+	}
+
 //Main class
 	public static void main(String[] args) {
 		DeckOfCards deckOfCardsGame = new DeckOfCards();
 		deckOfCardsGame.welcome();
 		deckOfCardsGame.deckOfCard();
+		deckOfCardsGame.noOfPlayers();
+
 	}
 }
