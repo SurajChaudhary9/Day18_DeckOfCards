@@ -81,6 +81,12 @@ public class DeckOfCards {
 		}
 	}
 
+	/**
+	 * @Purpose :To shuffle card
+	 * @Param :Choice i/p
+	 * @Function :condition
+	 * @Return :no return
+	 */
 	public static void shuffleCard() {
 		System.out.println("shuffling the cards before Distribution");
 		ArrayList<String> temp = new ArrayList<String>();
@@ -93,6 +99,24 @@ public class DeckOfCards {
 		toDisplay(deckCards);
 	}
 
+	/**
+	 * @Purpose :To distribute card
+	 * @Param :Choice i/p
+	 * @Function :condition
+	 * @Return :no return
+	 */
+
+	public static void cardDistribution() {
+		int player = 0;
+		for (int i = 0; i < player; i++) {
+			System.out.print("\nPlayer " + (i + 1) + " got cards:\n");
+			for (int j = 0; j < 9; j++) {
+				System.out.print("\t" + deckCards.get(i + j * player));
+			}
+		}
+		System.out.println();
+	}
+
 //Main class
 	public static void main(String[] args) {
 		DeckOfCards deckOfCardsGame = new DeckOfCards();
@@ -101,6 +125,7 @@ public class DeckOfCards {
 		deckOfCardsGame.noOfPlayers();
 		deckOfCardsGame.seqOfPlayer(4);
 		deckOfCardsGame.shuffleCard();
+		deckOfCardsGame.cardDistribution();
 
 	}
 }
