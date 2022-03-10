@@ -68,12 +68,26 @@ public class DeckOfCards {
 		}
 	}
 
+	/**
+	 * @Purpose :To get sequence of players
+	 * @Param :Choice i/p
+	 * @Function :condition
+	 * @Return :no return
+	 */
+	public void seqOfPlayer(int player) {
+		System.out.println("\nSequence of cards are below : ");
+		for (int i = 1; i <= player; i++) {
+			System.out.println("\nPlayer " + i + " Getting card.............");
+		}
+	}
+
 //Main class
 	public static void main(String[] args) {
 		DeckOfCards deckOfCardsGame = new DeckOfCards();
 		deckOfCardsGame.welcome();
 		deckOfCardsGame.deckOfCard();
 		deckOfCardsGame.noOfPlayers();
+		deckOfCardsGame.seqOfPlayer(4);
 
 	}
 }
